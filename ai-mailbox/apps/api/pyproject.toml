@@ -1,0 +1,37 @@
+[build-system] 
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-mailbox-api"
+version = "0.1.0"
+description = "AI Mailbox API"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.111.0",
+  "uvicorn[standard]",
+  "pydantic>=2.6",
+  "pydantic-settings>=2.2",
+  "sqlalchemy>=2.0",
+  "psycopg[binary]",
+  "alembic>=1.13",
+  "python-dotenv",
+  "httpx>=0.27",
+  "redis>=5.0",
+  "celery>=5.3",
+  "tenacity>=8.2",
+  "beautifulsoup4",
+  "lxml",
+  "markdown-it-py",
+  "tiktoken",
+  "pgvector>=0.2.5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff", "mypy"]
+
+[tool.uvicorn]
+factory = false
+
+[tool.setuptools]
+packages = ["app"]

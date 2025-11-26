@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+.env
+.venv/
+venv/
+.env.*
+.alembic/
+**/.mypy_cache/
+**/.pytest_cache/
+**/.ruff_cache/
+**/.DS_Store
